@@ -33,6 +33,11 @@ const Nav: React.FC<Props> = ({
                         <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="aws">AWS</NavLinkDropdownLink>
                     </ul>
                 </NavLinkDropdown>
+                <NavLinkDropdown navLinkColor={headerColor} title="Version Control" >
+                    <ul>
+                        <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="github">Github</NavLinkDropdownLink>
+                    </ul>
+                </NavLinkDropdown>
                 <NavLinkDropdown navLinkColor={headerColor} title="Testing" >
                     <ul>
                         <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="cypress">Cypress</NavLinkDropdownLink>
