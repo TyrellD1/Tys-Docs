@@ -56,10 +56,10 @@
         "id": "8"
     },
     {
-        "header": "",
-        "date": "",
-        "time": "",
-        "body": "",
+        "header": "Getting First Job and outerHTML",
+        "date": "9/2/21",
+        "time": "10:17pm",
+        "body": "I got my first developer job today! Also, outerHTML exists and basically shows all the html the element has outside of the inner html lol. Like <p className='meow'></p> Would be the outer html to <p className='meow'>Hey how are ya</p>.",
         "id": "9"
     },
     {

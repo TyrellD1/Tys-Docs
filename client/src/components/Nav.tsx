@@ -22,7 +22,12 @@ const Nav: React.FC<Props> = ({
         <nav style={{backgroundColor: accentColor, top: `-${visibility}`}} className="master-navbar">
             <div className="nav-link-container">
                 <NavLink style={{color: headerColor}} className="nav-link" to="/">Home</NavLink>
-                <NavLink style={{color: headerColor}} className="nav-link" to="journal-entries">Coding Journal</NavLink>
+                <NavLinkDropdown navLinkColor={headerColor} title="Coding Journal" >
+                    <ul style={{backgroundColor: accentColor}}>
+                        <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="journal-entries">Journal Entries</NavLinkDropdownLink>
+                        <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="create-journal-entries">Create Entry</NavLinkDropdownLink>
+                    </ul>
+                </NavLinkDropdown>
                 <NavLinkDropdown navLinkColor={headerColor} title="BlockChain" >
                     <ul style={{backgroundColor: accentColor}}>
                         <NavLinkDropdownLink color={headerColor} backgroundColor={accentColor} hoverBackgroundColor={accentHoverColor} path="blockchain/developing">Developing</NavLinkDropdownLink>

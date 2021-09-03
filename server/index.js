@@ -33,12 +33,11 @@ app.get('/', (req, res) => {
     res.send("hello")
 })
 
-app.post('/api/create_account', (req,res)=> {
-    const username = req.body.username;
-    const password = req.body.password;
-    const email = req.body.email;
-    const sqlInsert = "INSERT INTO `accounts` (`username`, `password`, `email`) VALUES (?, ?, ?)"
-    db.query(sqlInsert, [username, password, email], (err, result) => {
+app.post('/api/create_journal_entry', (req,res)=> {
+    const header = req.body.header;
+    const body = req.body.body;
+    const sqlInsert = "INSERT INTO `journal_entries` (`header`, `body`) VALUES (?, ?)"
+    db.query(sqlInsert, [header, body], (err, result) => {
         err?console.log(err):console.log(result)
     })
 })

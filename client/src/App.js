@@ -2,8 +2,7 @@ import './App.scss';
 import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
 import JournalEntries from './components/Journal-Entries/JournalEntries';
-import CodeSnippet from './components/CodeSnippet';
-import PageTitle from './components/PageTitle';
+import CreateJournalEntry from './components/Journal-Entries/CreateJournalEntry';
 import Home from './components/Pages/Home';
 import ReactPage from './components/Pages/Languages/React';
 import {colors} from './UniversalValues';
@@ -98,6 +97,9 @@ function App() {
           <Route exact path="/"><Home headerColor={universalHeaderColor} /></Route>
           <Route path="/journal-entries">
             <JournalEntries headerColor={universalHeaderColor} otherColor={universalOtherColor} paragraphColor={universalParagraphColor} />
+          </Route>
+          <Route path="/create-journal-entries">
+            <CreateJournalEntry />
           </Route>
           <Route path="/react">
             <ReactPage headerColor={universalHeaderColor} otherColor={universalOtherColor} />        
