@@ -42,6 +42,13 @@ app.post('/api/create_journal_entry', (req,res)=> {
     })
 })
 
+app.get('/api/get_all_journal_entries', (req,res)=> {
+    const sqlInsert = "SELECT * FROM 'journal_entries"
+    db.query(sqlInsert, (err, result) => {
+        err?console.log(err):console.log(result)
+    })
+})
+
 app.listen(process.env.PORT || 3306, () => {
     console.log(`running on port ${process.env.PORT || 3306}`);
 })
