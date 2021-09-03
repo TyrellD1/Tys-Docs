@@ -34,10 +34,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/create_journal_entry', (req,res)=> {
-    const header = req.body.header;
+    const heading = req.body.heading;
     const body = req.body.body;
     const sqlInsert = "INSERT INTO `journal_entries` (`header`, `body`) VALUES (?, ?)"
-    db.query(sqlInsert, [header, body], (err, result) => {
+    db.query(sqlInsert, [heading, body], (err, result) => {
         err?console.log(err):console.log(result)
     })
 })
