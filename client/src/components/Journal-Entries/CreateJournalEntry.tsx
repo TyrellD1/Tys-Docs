@@ -9,13 +9,13 @@ type Props = {
 const CreateJournalEntry: React.FC<Props> = ({
 
 }) => {
-    const [header, setHeader] = useState("I'm header");
+    const [heading, setHeading] = useState("I'm heading");
     const [body, setBody] = useState("<p>This is the initial content of the editor.</p>")
     const editorRef = useRef<any>(null);
     console.log(editorRef)
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        axios.post("https://tys-docs-server.herokuapp.com//api/create_journal_entry", {header: header, body: body})
+        axios.post("https://tys-docs-server.herokuapp.com/api/create_journal_entry", {heading: heading, body: body})
             .then((result) => {
                 alert(result)
             }).catch((error) => {
@@ -27,7 +27,7 @@ const CreateJournalEntry: React.FC<Props> = ({
     }, [body])
     return (
         <form onSubmit={onSubmit}>
-            <input value={header} placeholder="Header" />
+            <input value={heading} placeholder="heading" />
             <Editor
                 ref={editorRef}
                 value={body}
